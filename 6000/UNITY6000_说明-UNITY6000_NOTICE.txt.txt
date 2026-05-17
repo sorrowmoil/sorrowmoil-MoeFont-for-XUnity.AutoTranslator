@@ -1,0 +1,129 @@
+Unity 6000 特别说明
+=========================
+
+本目录中的 TMP 字体资产并非完全使用 Unity 6000 原生重新生成。
+
+当前版本采用：
+
+「Unity 2023 TMP 资产 → Unity 6000 重打包」
+
+的兼容方案进行构建。
+
+原因
+-------------------------
+
+根据目前的实际测试结果：
+
+Unity 6000 原生 TMP Font Asset Creator 在超大字符集环境下，
+其行为与旧世代 TMP 存在明显差异。
+
+目前已观察到的问题包括：
+
+- 部分字符缺失
+- Glyph Atlas 填充异常
+- Atlas Packing 行为变化
+- 生成后的 TMP 文件体积异常缩小
+- 部分字符在游戏内显示为空白
+
+此外：
+
+Unity 6000 的 TMP 似乎已经开始偏向新的动态字体机制，
+其 Atlas 生成逻辑与 2018~2023 世代存在明显不同。
+
+兼容方案说明
+-------------------------
+
+为了尽可能保留：
+
+- 字符完整性
+- 萌系字体风格一致性
+- 传统 TMP 行为
+- 大字符集兼容性
+- XUnity.AutoTranslator 实际使用稳定性
+
+因此本仓库选择：
+
+使用 Unity 2023 世代生成的传统 TMP 字体资产，
+再交由 Unity 6000 进行重新保存与兼容打包。
+
+目前实际测试结果表明：
+
+相比 Unity 6000 原生生成方案，
+该兼容方案在游戏中的稳定性明显更高。
+
+关于 Dynamic OS
+-------------------------
+
+本仓库默认不采用 Dynamic OS 模式。
+
+原因如下：
+
+- Dynamic OS 会使用系统字体进行缺字补充
+- 可能导致字体风格突然变化
+- 会破坏萌系字体的整体视觉统一性
+
+因此本仓库仍优先采用传统 TMP Dynamic 方案。
+
+关于 Padding
+-------------------------
+
+测试结果表明：
+
+Unity 6000 的 TMP 在大字符集环境下，
+似乎更加偏向使用「百分比 Padding」而非固定像素 Padding。
+
+使用固定 px Padding 时：
+
+可能导致：
+- Atlas 利用率下降
+- Glyph Packing 异常
+- 字符缺失概率上升
+
+测试环境
+-------------------------
+
+- TMP Dynamic
+- SDF32
+- 8192 Atlas
+- 大规模 CJK 字符集
+- XUnity.AutoTranslator
+
+Made by sorrowmoil
+
+
+Unity 6000 Special Notice
+=========================
+
+The TMP assets inside this folder are rebuilt from the Unity 2023 generation assets instead of being fully generated natively in Unity 6000.
+
+Reason:
+Current testing indicates that Unity 6000's native TMP Font Asset Creator may behave differently from previous TMP generations when handling extremely large character sets.
+
+Observed issues include:
+- Missing glyphs
+- Incomplete atlas population
+- Abnormal atlas packing behavior
+- Unexpected reduction in generated asset size
+
+To preserve:
+- glyph completeness
+- visual consistency
+- traditional TMP rendering behavior
+- moe font styling
+
+the Unity 2023 TMP assets were migrated and repackaged under Unity 6000.
+
+This approach currently provides more stable real-world results in XUnity.AutoTranslator environments.
+
+Additional Notes:
+- Dynamic OS mode is intentionally NOT used.
+- Traditional Dynamic TMP behavior is preferred to maintain visual consistency.
+- Unity 6000 appears to favor percentage-based padding rather than fixed pixel padding for large atlas generation.
+
+Tested Environment:
+- TMP Dynamic
+- SDF32
+- 8192 Atlas
+- Large CJK Character Sets
+
+Made by sorrowmoil
