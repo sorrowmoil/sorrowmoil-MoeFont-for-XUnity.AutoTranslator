@@ -1,11 +1,19 @@
 <div align="center">
 
+[![English](https://img.shields.io/badge/Lang-English-blue?style=for-the-badge)](./readme_en.md)
+[![日本語](https://img.shields.io/badge/Lang-日本語-red?style=for-the-badge)](./readme_jp.md)
+
+</div>
+
+
+<div align="center">
+
 # 🎀 sorrowmoil MoeFont Archive
 
 > 适用于 XUnity.AutoTranslator 的多世代萌系 TMP 字体资产仓库  
 > 为不同 Unity/TMP 世代提供独立构建的萌系汉化字体资产。
 
-[![Unity](https://img.shields.io/badge/Unity-2018%20–%206000-black?logo=unity)](.)
+[![Unity](https://img.shields.io/badge/Unity-2017%20–%206000-black?logo=unity)](.)
 [![License](https://img.shields.io/badge/License-原字体作者保留权利-lightgrey)](.)
 
 </div>
@@ -28,6 +36,7 @@
 <div align="center">
 
 ![Preview](preview/comparison.png)
+![Preview](preview/comparison-2.png)
 
 </div>
 
@@ -76,11 +85,14 @@
 
 # 🎯 支持的 Unity 世代
 
-> 下列版本表示字体资产的构建环境，而非仅运行兼容范围。
+> 下列版本表示字体资产的构建环境，而非仅运行兼容范围。  
+> 具体构建版本号请参见各 Release 说明。
 
-| Unity 世代 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 | 6000 |
-|------------|------|------|------|------|------|------|------|
-| 支持状态 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Unity 世代 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 | 6000 |
+|------------|------|------|------|------|------|------|------|------|
+| 支持状态 | ⚠️  | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+
+> ⚠️ Unity 2017 兼容性不做保证（详见[兼容性说明](#-兼容性说明)）
 
 ---
 
@@ -88,9 +100,12 @@
 
 当前仓库已为下列萌系字体制作对应世代的 TMP 字体资产：
 
-- **Lolita**
-- **Yozai**
-- **Xiaolai**
+- **萝莉体（Lolita）**
+- **悠哉字体（Yozai）**
+- **小赖字体（Xiaolai）**
+- **851远星湖手写体（851LakeusNightWriting-Regular）**
+- **霞鹜文楷 GB（LXGWWenKaiGB-Regular）**
+- **猫啃网故障黑（maokenwanguzhanhei）**
 
 ---
 
@@ -106,7 +121,9 @@
 - Fast Mode  
 - 8192 × 8192 图集  
 - 原始 4 万字符级以上资产  
-- 多世代独立烘焙
+- 多世代独立烘焙  
+- **LZ4 压缩**（全世代统一，替换原 LZMA，磁盘占用有所增加）  
+- **Multi Atlas**（Unity 2021 及以上世代开启）
 
 此外：
 
@@ -124,6 +141,16 @@
 ---
 
 # 🔄 兼容性说明
+
+<details>
+<summary><b>⚠️ 关于 Unity 2017 世代的特别说明</b></summary>
+
+Unity 2017 世代字体资产基于 **2017.1.0b2** 构建，但由于目前未能找到可验证的 Unity 2017 游戏环境，**其兼容性不做保证**。  
+建议在有条件的情况下自行测试，并反馈结果。
+
+</details>
+
+---
 
 <details>
 <summary><b>📉 低世代与高世代 TMP 的兼容关系</b></summary>
@@ -145,13 +172,11 @@
 <details>
 <summary><b>⚠️ 关于 Unity 6000 世代的特别说明</b></summary>
 
-根据目前的测试与观察结果：
-
-- Unity 6000 世代游戏似乎仅支持由 Unity 6000/TMP 6000 构建的字体资产  
-- 旧世代 TMP 字体资产在 Unity 6000 下大概率无法正常工作
+本仓库提供的 **Unity 6000 世代字体资产采用兼容方案（Repackage）构建**，旨在绕过原生构建在超大字符集下可能出现的问题。  
+该方案已在测试中表现出更高稳定性，具体技术细节请参阅 Release 内的 `UNITY6000_NOTICE.txt`。
 
 > [!IMPORTANT]
-> Unity 6000 游戏请务必优先使用本仓库中的 6000 专属版本。
+> Unity 6000 游戏请务必优先使用本仓库中的 **6000 专属版本**。
 
 </details>
 
@@ -164,7 +189,7 @@
 ```ini
 OverrideFontTextMeshPro=
 FallbackFontTextMeshPro=
-````
+```
 
 通常情况下：
 
@@ -211,4 +236,3 @@ Preserving moe font compatibility across Unity generations.
 Made with 💖 by sorrowmoil
 
 </div>
-
