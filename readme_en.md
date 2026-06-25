@@ -36,6 +36,8 @@ Used to demonstrate actual glyph appearance and stylistic differences across fon
 
 ![Preview](preview/comparison.png)
 ![Preview](preview/comparison-2.png)
+![Preview](preview/comparison-3.png)
+
 </div>
 
 ---
@@ -86,11 +88,11 @@ All assets strive to maintain consistency with the corresponding era's editor, T
 > The versions below indicate the build environment for the font assets, not merely a runtime compatibility range.  
 > See individual Release notes for specific build version numbers.
 
-| Unity Generation | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 | 6000 |
-|------------------|------|------|------|------|------|------|------|------|
-| Support Status   | ⚠️   | ✅   | ✅   | ✅   | ✅   | ✅   | ✅   | ✅   |
+| Unity Generation | 5.x | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023 | 6000 |
+|------------------|------|------|------|------|------|------|------|------|------|
+| Support Status  | ⚠️   | ⚠️   |   ✅   |   ✅   |   ✅   |   ✅   |   ✅   |   ✅   |   ✅   |
 
-> ⚠️ Unity 2017 compatibility is not guaranteed (see [Compatibility Notes](#-compatibility-notes))
+> ⚠️ Unity 5.x 2017 compatibility is not guaranteed (see [Compatibility Notes](#-compatibility-notes))
 
 ---
 
@@ -104,7 +106,9 @@ TMP font assets have been prepared for the following moe fonts across all suppor
 - **851LakeusNightWriting-Regular**
 - **LXGWWenKaiGB-Regular**
 - **maokenwanguzhanhei**
-
+- **Ark Pixel 12px Mono**
+- **StarLoveSweety**
+- **StarLoveSweety**
 ---
 
 # ⚙️ Build Configuration
@@ -121,7 +125,8 @@ All fonts are built following approximate specifications:
 - Original assets with 40,000+ characters  
 - Multi-generation independent baking  
 - **LZ4 Compression** (applied across all generations, replacing previous LZMA; disk usage has increased accordingly)  
-- **Multi Atlas** (enabled for Unity 2021 and above)
+- ~~**Multi Atlas** (enabled for Unity 2021 and above)~~
+> <I>Tests indicate that after enabling **Multi Atlas**, translation loss occurs in the game. </I>
 
 In addition:
 
@@ -141,9 +146,9 @@ This approach primarily aims to reduce:
 # 🔄 Compatibility Notes
 
 <details>
-<summary><b>⚠️ Special Note on Unity 2017 Generation</b></summary>
+<summary><b>⚠️ Special Note on Unity 5.x 2017 Generation</b></summary>
 
-The Unity 2017 font assets are built based on **2017.1.0b2**. However, due to the lack of a verifiable Unity 2017 game environment for testing, **their compatibility is not guaranteed**.  
+The Unity 5.x 2017 font assets are built based on **5.2.0f** and **2017.1.0b2**. However, due to the lack of a verifiable Unity 5.x 2017 game environment for testing, **their compatibility is not guaranteed**.  
 You are advised to test them yourself if possible and provide feedback.
 
 </details>
