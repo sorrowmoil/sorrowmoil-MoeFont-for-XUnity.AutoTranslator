@@ -13,7 +13,7 @@
 > 适用于 XUnity.AutoTranslator 的多世代萌系 TMP 字体资产仓库  
 > 为不同 Unity/TMP 世代提供独立构建的萌系汉化字体资产。
 
-[![Unity](https://img.shields.io/badge/Unity-2017%20–%206000-black?logo=unity)](.)
+[![Unity](https://img.shields.io/badge/Unity-5.x%20–%206000-black?logo=unity)](.)
 [![License](https://img.shields.io/badge/License-原字体作者保留权利-lightgrey)](.)
 
 </div>
