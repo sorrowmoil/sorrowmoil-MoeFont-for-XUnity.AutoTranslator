@@ -12,7 +12,7 @@
 > XUnity.AutoTranslator 向け多世代萌え系 TMP フォントアセットアーカイブ  
 > Unity/TMP 世代ごとに独立構築された萌え系中国語化フォントアセットを提供します。
 
-[![Unity](https://img.shields.io/badge/Unity-2017%20–%206000-black?logo=unity)](.)
+[![Unity](https://img.shields.io/badge/Unity-5.x%20–%206000-black?logo=unity)](.)
 [![License](https://img.shields.io/badge/License-原著作者に権利が帰属します-lightgrey)](.)
 
 </div>
