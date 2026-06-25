@@ -12,7 +12,7 @@
 > A multi-generation moe TMP font asset archive for XUnity.AutoTranslator  
 > Providing independently built moe-style Chinese localization font assets for each Unity/TMP generation.
 
-[![Unity](https://img.shields.io/badge/Unity-2017%20–%206000-black?logo=unity)](.)
+[![Unity](https://img.shields.io/badge/Unity-5.x%20–%206000-black?logo=unity)](.)
 [![License](https://img.shields.io/badge/License-Rights_reserved_by_original_font_authors-lightgrey)](.)
 
 </div>
